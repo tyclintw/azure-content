@@ -269,24 +269,24 @@ The Diagram View with both activities in the same pipeline would look like below
 It is possible to run multiple copy operations one after another in a sequential/ordered manner. Say you have two copy activities in a pipeline: CopyActivity1 and CopyActivity with the following input data output datasets.   
 
 CopyActivity1: 
-Input: Dataset1
-Output Dataset2
+- Input: Dataset1
+- Output: Dataset2
 
 CopyActivity2: 
-Inputs: Dataset2
-Output: Dataset4
+- Input: Dataset2
+- Output: Dataset4
 
 CopyActivity2 would run only if the CopyActivity1 has run successfully and Dataset2 is available. 
 
 In the above example, CopyActivity2 can have a different input, say Dataset3, but you will need to specify Dataset2 also as an input to CopyActivity2 so the activity will not run until CopyActivity1 completes. For example: 
 
-CopyActivity1: 
-Input: Dataset1
-Output Dataset2
+CopyActivity1:
+- Input: Dataset1
+- Output: Dataset2
 
 CopyActivity2: 
-Inputs: Dataset3, Dataset2
-Output: Dataset4
+- Inputs: Dataset3, Dataset2
+- Output: Dataset4
 
 When multiple inputs are specified, only the first input dataset is used for copying data but other datasets are used as dependencies. CopyActivity2 would only start executing when the following conditions are met: 
 
