@@ -266,7 +266,7 @@ The Diagram View with both activities in the same pipeline would look like below
 ![Chaining activities in the same pipeline](./media/data-factory-scheduling-and-execution/chaining-one-pipeline.png)
 
 ### Ordered copy
-It is possible to run multiple copy operations one after another in a sequential/ordered manner. Say you have two copy activities in a pipeline: CopyActivity1 and CopyActivity with the following input data output datasets.   
+It is possible to run multiple copy operations one after another in a sequential/ordered manner. Say you have two copy activities in a pipeline: CopyActivity1 and CopyActivity2 with the following input data output datasets.   
 
 CopyActivity1: 
 Input: Dataset1
