@@ -527,8 +527,8 @@ The hive activity takes the 2 inputs and produces an output slice every day. You
 	          },
 	          {
 	            "name": "AzureBlobInputWeekly",
-	            "startTime": "Date.AddDays(SliceStart, - Date.DayOfWeek(SliceStart))",
-	            "endTime": "Date.AddDays(SliceEnd,  -Date.DayOfWeek(SliceEnd))"  
+	            "startTime": "Date.AddDays(SliceStart, -Date.DayOfWeek(SliceStart))",
+	            "endTime": "Date.AddDays(SliceEnd, -Date.DayOfWeek(SliceEnd))"  
 	          }
 	        ],
 	        "outputs": [
